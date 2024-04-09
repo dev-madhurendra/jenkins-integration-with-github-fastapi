@@ -29,11 +29,4 @@ pipeline {
             }
         }
     }
-    
-    post {
-        always {
-            // Archive test results
-            junit 'tests/**/*.xml'
-        }
-    }
 }
