@@ -26,6 +26,7 @@ pipeline {
             steps {
                 // Run FastAPI application
                 sh "${VENV_DIR}/bin/python3 main.py"
+                sh uvicorn main:app --reload
             }
         }
     }
