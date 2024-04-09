@@ -17,7 +17,6 @@ pipeline {
             steps {
                 // Set up virtual environment
                 sh "${PYTHON_BIN} -m venv ${VENV_DIR}"
-                sh "source ${VENV_DIR}/bin/activate"
                 sh "${VENV_DIR}/bin/pip install -r requirements.txt"
             }
         }
