@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the source code from the repository
-                git 'https://github.com/dev-madhurendra/jenkins-integration-with-github-fastapi.git'
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/dev-madhurendra/jenkins-integration-with-github-fastapi.git']]])
             }
         }
         
