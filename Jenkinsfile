@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Run FastAPI application
                 sh "${VENV_DIR}/bin/python3 main.py"
-                sh "${VENV_DIR}/bin/uvicorn main:app --reload --port 8082"
+                // sh "${VENV_DIR}/bin/uvicorn main:app --reload --port 8082"
             }
         }
     }
